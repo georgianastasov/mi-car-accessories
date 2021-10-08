@@ -1,0 +1,84 @@
+.stuff {
+    background-image: url(https://red-giraffe.com/wp-content/uploads/2015/10/IMG_8181-copyweb.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stuff::before{
+    display: block;
+    content: '';
+    background: rgba(49, 49, 49, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.stuff .wrapper {
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stuff .box {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stuff .box a {
+    border: 2px solid #FF6C00;
+    border-radius: 50%;
+    padding: 1.1rem;
+}
+
+.stuff .box a i {
+    color: #FF6C00;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.stuff .box p {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #FF6C00;
+}
+
+.stuff .box a:hover {
+    background-color: #FF6C00;
+}
+
+.stuff .box a:hover i{
+    color: black;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 820px) {
+    .stuff .box p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 670px) {
+    .stuff .box p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    .stuff .box p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,166 @@
+.news {
+    background-color: #E9E9E9;
+}
+
+.news .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 8rem;
+}
+
+.news .title {
+    flex: 0 0 100%;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-top: 3rem;
+}
+
+.news .container {
+    flex: 0 0 100%;
+    height: 60vh;
+    margin-bottom: 1rem;
+}
+
+.news .shadow {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    background-image: url(https://imgr1.auto-motor-und-sport.de/Lamborghini-Huracan-Evo-Exterieur-react169Big-7af36605-1617746.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.3rem 0.1rem rgb(0 0 0 / 50%);
+}
+
+.news .shadow::after{
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.news .wrapper .shadow::after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.news .container .content {
+    z-index: 10;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.news .container .content:hover { color: #FF6C00; }
+.news .container .content:hover span { background-color: #FF6C00; }
+.news .container .box .content:hover { color: #FF6C00; }
+
+.news .container .box .content {
+    z-index: 10;
+    color: white;
+    padding: 0 0 1rem 1rem;
+}
+
+.news .container .content span {
+    display: block;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: grey;
+    margin: 0.3rem 0 0.5rem ;
+    border-radius: 0.2rem;
+}
+
+.news .container .content .content-title {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.news .container .content .desc {
+    font-size: 0.8rem;
+}
+
+.news .container:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.news .container:last-child .first {
+    flex: 0 0 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    background-image: url(https://northernsupercarhire.com/wp-content/uploads/2019/03/Lam-Urus-2021-2-750x440.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.3rem 0.1rem rgb(0 0 0 / 50%);
+    margin-bottom: 1rem;
+}
+
+.news .container:last-child .second, .third {
+    flex: 0 0 48%;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.3rem 0.1rem rgb(0 0 0 / 50%);
+    margin-bottom: 1rem;
+}
+
+.news .container:last-child .first::before, .second:before, .third:before {
+    display: block;
+    content: '';
+    background: rgba(49, 49, 49, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.news .container:last-child .second {
+    background-image: url(http://www.lambodiecast.com/thumbs/model755h.jpg);
+}
+
+.news .container:last-child .third {
+    background-image: url(https://www.autogen.pl/cars/LamboCent/1.jpg);
+}
+
+@media screen and (min-width: 700px) {
+    .news .wrapper {
+        padding-bottom: 2rem;
+    }
+
+    .news .container {
+        flex: 0 0 49%;
+        margin-bottom: 0;
+    }
+
+    .news .container:last-child .first {
+        height: 30vh;
+        margin-bottom: 0.4rem;
+    }
+
+    .news .container:last-child .second, .third {
+        height: 29vh;
+        margin-bottom: 0;
+    }
+}

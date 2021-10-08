@@ -1,0 +1,47 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.ubackground.com/_ph/84/425435912.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 77vh;
+}
+
+.intro::before{
+    display: block;
+    content: '';
+    background: rgba(49, 49, 49, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.intro .box {
+    z-index: 10;
+}
+
+.intro .box p {
+    color: white;
+    font-family: Oswald;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.intro .box-buttons a{ 
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+}
+
+.intro .box-buttons a:hover {
+    background-color: #FF6C00;
+}

@@ -1,0 +1,105 @@
+.models {
+    background-color: #E9E9E9;
+}
+
+.models header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.models header .title {
+    flex: 0 0 100%;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.models header ul {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+
+.models header ul li {
+    list-style: none outside;
+}
+
+.models header ul li:not(:last-child) {
+    margin-right: 0.15rem;
+}
+
+.models header ul li a {
+    color: white;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    background: rgb(133,133,133);
+    background: linear-gradient(185deg, rgba(133,133,133,1) 0%, rgb(17, 17, 17) 100%);
+    border-radius: 0.1rem;
+}
+
+.models header ul li a:hover {
+    background: rgb(133,133,133);
+    background: linear-gradient(185deg, rgb(255, 136, 0) 0%, rgb(207, 76, 0) 100%);
+    color: white;
+}
+
+.models .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.models .box .card {
+    flex: 0 0 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.models .card .card-media {
+    display: block;
+    height: 12rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.models .card .card-media::after {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.models .card .card-media img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.card .card-title {
+    margin-top: 0.8rem;
+}
+
+.card .card-desc {
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 770px) {
+    .models .box .card {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .models .box .card {
+        flex: 0 0 30%;
+    }
+}

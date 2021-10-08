@@ -1,0 +1,106 @@
+.site-footer {
+    background-color: #E9E9E9;
+    padding-top: 5rem;
+    box-shadow: 
+    inset 10px 15px 2rem -10px #CCC,
+    inset 10px -15px 2rem -10px #CCC; 
+}
+
+.site-footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-footer section {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.site-footer .title {
+    text-transform: uppercase;
+    color: darkslategray;
+    border-bottom: 2px solid grey;
+    margin-bottom: 1rem;
+}
+
+.site-footer nav ul li {
+    list-style: none outside;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.site-footer nav ul li:not(:first-child) {
+    margin-top: 0.3rem;
+}
+
+.site-footer nav ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.site-footer nav ul li a:hover {
+    color: rgb(36, 61, 61);
+}
+
+@media screen and (min-width: 500px) {
+    .site-footer .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .site-footer section {
+        flex-basis: 50%;
+        text-align: start;
+        margin-top: 0.6rem;
+    }
+    
+    .site-footer .title {
+        border: 0px;
+        margin-bottom: 0;
+    }
+
+    .site-footer .delimiter {
+        display: block;
+        width: 2.3rem;
+        height: 0.2rem;
+        background-color: grey;
+        border-radius: 0.5rem;
+        margin: 0.4rem 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .site-footer .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .site-footer section {
+        flex-basis: 24%;
+        text-align: start;
+    }
+
+    .site-footer .title {
+        border: 0px;
+        margin-bottom: 0;
+    }
+
+    .site-footer .delimiter {
+        display: block;
+        width: 2.3rem;
+        height: 0.2rem;
+        background-color: grey;
+        border-radius: 0.5rem;
+        margin: 0.4rem 0;
+    }
+}

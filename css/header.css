@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@600;700&family=Rajdhani:wght@300&family=Roboto+Condensed:wght@300&family=Ubuntu:wght@500&display=swap');
+
+.site-header {
+    background-color: black;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.site-header .info {
+    order: 1;
+    flex-basis: 30%;
+}
+
+#toggle {
+    color: white;
+    order: 2;
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.site-header nav.main {
+    order: 4;
+    text-align: center;
+}
+
+.site-header .cart {
+    order: 3;
+    flex-basis: 30%;
+}
+
+.site-header .title {
+    font-size: 2rem;
+    text-decoration: none;
+    color: orange;
+    font-family: Ubuntu;
+}
+
+.site-header .desc {
+    color: white;
+    text-transform: uppercase;
+}
+
+.site-header nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    color: white;
+}
+
+nav.main ul ul {
+    display: block;
+}
+
+#main-nav-toggle {
+    display: none;
+}
+
+.site-header nav ul li {
+    display: block;
+    position: relative;
+    list-style: none outside;
+    padding: 0 0.5rem;
+}
+
+.site-header nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.4rem 0.3rem;
+    color: white;
+}
+
+.site-header nav ul > li > ul {
+    margin-top: 0.1rem;
+}
+
+.site-header nav ul > li > ul > li {
+    padding: 0.3rem 0.5rem;
+}
+
+.site-header nav ul > li > ul > li a {
+    padding: 0 0.3rem;
+}
+
+.site-header nav ul li a:hover {
+    color: orange;
+}
+
+.site-header nav ul li a i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.site-header nav ul li a:hover i {
+    color: orange;
+}
+
+@media screen and (max-width: 920px) {
+    nav.main {
+        display: none;
+    }
+
+    nav.main ul {
+        display: block;
+    }
+
+    nav.main > ul > li:not(:last-child) {
+        padding-right: 0;
+        padding-bottom: 0.3rem;
+    }
+
+    #main-nav-toggle:checked + header nav.main {
+        display: block;
+        flex: 1 0 100%;
+    }
+
+    #toggle:hover, #toggle:hover i{
+        color: #FF6C00;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    #toggle { 
+        display: none;
+    }
+
+    .site-header .info {
+        order: 1;
+        flex-basis: 15%;
+    }
+
+    .site-header nav.main {
+        order: 2;
+        text-align: start;
+        flex-basis: 30%;
+    }
+    
+    .site-header .cart {
+        order: 3;
+        flex-basis: 15%;
+    }
+
+    .site-header nav.main .submenu a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .site-header nav.main .submenu a i {
+        margin-left: 0.3rem;
+    }
+
+    .site-header nav > ul > li:not(:last-child){
+        border-right: 1px solid white;
+    }
+
+    nav.main li:hover > ul {
+        opacity: 1;
+        pointer-events: inherit;
+        transform: translateY(0);
+    }
+
+    nav.main ul ul {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transition: opacity 0.2s ease-out, transform 0.2s ease-in;
+        transform: translateY(2rem);
+        z-index: 20;
+        background-color: black;
+    }
+
+    nav.main > ul > li > ul {
+        margin-top: 1rem;
+        top: 0.95rem;
+        left: -1.2rem;
+    }
+    
+    .site-header nav ul > li > ul > li:not(:last-child) {
+        border-bottom: 1px solid white;
+    }
+}
